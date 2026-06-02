@@ -52,7 +52,7 @@ export class InspectorOption {
     for (const key of inputKeys) {
       if (!allowedKeys.includes(key)) {
         const currentPath = path ? `${path}.${key}` : key;
-        throw new Error(`引数不正。実際:${currentPath}は未定義です。期待されるキー:[${allowedKeys.join(', ')}]`);
+        throw new Error(`引数不正。${currentPath}は不正なキーです。期待されるキー:[${allowedKeys.join(', ')}]`);
       }
     }
 
