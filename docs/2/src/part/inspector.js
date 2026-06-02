@@ -86,6 +86,6 @@ export class Inspector {
       const validKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key) ? key : `'${key}'`;
       return `${validKey}: ${this.#execute(value, opt)}`;
     });
-    return `{ ${pairs.join(', ')} }`;
+    return `{${pairs.join(', ')}}`;
   }
 }
