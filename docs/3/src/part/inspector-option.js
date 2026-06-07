@@ -3,6 +3,7 @@ export class InspectorOption {
     QUOTES: ["'", '"', '`'],
     SYM_MODES: ['standard', 'exception', 'raw'],
     INS_MODES: ['lost', 'exception'],
+    OBJ_INDENTS: [0,1,2,4,8],
   });
 
   static #SCHEMA = Object.freeze({
@@ -18,6 +19,10 @@ export class InspectorOption {
     ins: Object.freeze({
       _fnExpect: 'v=>`new ${v.constructor.name}(/*引数情報消失*/)"`等',
       mode: this.#VAL.INS_MODES
+    }),
+    ins: Object.freeze({
+      _fnExpect: 'v=>`new ${v.constructor.name}(/*引数情報消失*/)"`等',
+      indent: 0,
     })
   });
 
